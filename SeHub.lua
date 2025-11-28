@@ -194,7 +194,7 @@ local function startFishing()
             -- 1. ChargeFishingRod
             local args1 = { tick() }
             net:WaitForChild("RF/ChargeFishingRod"):InvokeServer(unpack(args1))
-            task.wait(0.4)
+            task.wait(0.0)
 
             -- 2. RequestFishingMinigameStarted
             local args = {
@@ -203,11 +203,11 @@ local function startFishing()
               
             }
             net:WaitForChild("RF/RequestFishingMinigameStarted"):InvokeServer(unpack(args))
-            task.wait(3) -- durasi minigame
+            task.wait(0.0) -- durasi minigame
 
             -- 3. FishingCompleted
             net:WaitForChild("RE/FishingCompleted"):FireServer()
-            task.wait(0.2)
+            task.wait(0.0)
         end
     end)
 end
