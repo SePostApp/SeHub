@@ -207,7 +207,7 @@ local function startFishing()
 
             -- 3. FishingCompleted
             net:WaitForChild("RE/FishingCompleted"):FireServer()
-            task.wait(0.0)
+            task.wait(0.1)
         end
     end)
 end
