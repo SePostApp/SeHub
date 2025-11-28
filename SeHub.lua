@@ -203,7 +203,7 @@ local function startFishing()
               
             }
             net:WaitForChild("RF/RequestFishingMinigameStarted"):InvokeServer(unpack(args))
-            task.wait(3) -- durasi minigame
+            task.wait(0.0) -- durasi minigame
 
             -- 3. FishingCompleted
             net:WaitForChild("RE/FishingCompleted"):FireServer()
